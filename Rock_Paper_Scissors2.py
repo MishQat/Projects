@@ -41,6 +41,7 @@ def rpc():
             print("Computer won!")
             break
         elif rpc_random == user_input:
+            print(rpc_random)
             print("Draw")
             break
         else:
