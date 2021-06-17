@@ -22,3 +22,4 @@ def shape_2d():
             print(f"The perimeter of the regular polygon is {polygon_perimeter} unit")
     else:
         sys.exit()
+shape_2d()
