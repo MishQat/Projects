@@ -1,25 +1,34 @@
+from tkinter import BooleanVar, StringVar, font
+from tkinter.ttk import *
+import tkinter
 import datetime
-from os import write
-import sys
 time = datetime.datetime.now()
 time_now = time.strftime("%d/%b/%Y. time: %H:%M")
 day_today = time.strftime("%A")
 date_today = time.strftime("%d")
-month_today = time.strftime("%B")
-year_today = time.strftime("%Y")#gets all data for time and date
-try:
-    user_input_diary = input(f"Today is {day_today}, {date_today}th of {month_today} {year_today} \nWhat do you want to write today?... ")#asks user
 
-    f = open("Diary.txt","a")
-    f.write(f"\nEntry of {time_now}\n{user_input_diary}")#takes entry
-    f.close
-    user_input = input("New entry added succesfully, do you want to see your whole diary.y/n?... ")
-    f = open("Diary.txt","r")
-except:
-    print("Data entry unsuccesful, try again.")
-    user_input = input("Do you wish to see your whole diary.y/n?... ")
-    f = open("Diary.txt","r")
-if user_input == "y":
-    print(f.read())#reads out the whole file if user wants to
-else:
-    sys.exit
+window = tkinter.Tk()#makes the window or the thing that will be displayed 
+window.configure(bg="Yellow")
+
+window.title("Notes")#title, like "Fortnite" basically a name of the window
+while True:
+    lable = tkinter.Label(window,text="welcome to notes what shall we write today",font=("Arial Italic",10),bg='white', fg='green')#important.basically what will be printed on the window, fonts and all types of things can be given
+
+
+    lable.grid(column=0,row=0)#where the writing will be placed basically x,y
+    user_value=StringVar()
+    txt=tkinter.Entry(window,textvariable=user_value,width=100)#input from user like input("blah")
+    txt.configure(bg="white",font="Arial",fg="black")
+    txt.grid(column=1,row=0)#where the entry box will be 
+
+    def clicked():#function that will do somethng when a button is pressed
+        f = open("records.txt","a")
+        f.write(f"Entry of {time_now}\n{txt.get()}\n")
+        f.close
+        f=open ("records.txt","r")
+        lable_read=tkinter.Label(window,text=f.read(),font=("Arial Italic",10),bg='white', fg='green')
+        lable_read.grid(row=1)
+       
+    bt= tkinter.Button(window, text="Confirm entry",bg="yellow", fg="cyan",command=clicked)#Button which we wrote the function for earlier, the colour and stuff can be changed. dose something when clicked(command=clicked)
+    bt.grid(column=0,row=2)
+    window.mainloop()#loops through it all makes the program work most important
