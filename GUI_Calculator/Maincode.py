@@ -69,6 +69,9 @@ Buttonnum.bind("<Button-1>",click)
 Buttonnum = Button(Frame1,text="9",fg="#000000",font="Lucida 35 bold",padx=22,pady=28, bg= "#0269A4")
 Buttonnum.pack(side=LEFT ,padx= 6 ,pady=5)
 Buttonnum.bind("<Button-1>",click)
+Buttonnum = Button(Frame1,text="0",fg="#000000",font="Lucida 35 bold",padx=22,pady=28,bg= "#0269A4")
+Buttonnum.pack(side=LEFT,padx= 6, pady=5)
+Buttonnum.bind("<Button-1>",click)
 Frame1.pack(pady=10)
 
 #Operators
