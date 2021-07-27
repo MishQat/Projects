@@ -58,7 +58,7 @@ Buttonnum.pack(side=LEFT ,padx= 6,  pady=5)
 Buttonnum.bind("<Button-1>",click)
 Frame1.pack(pady= 10)
 
-#for number 9,8,7
+#for number 9,8,7 and 0
 Frame1 = Frame(root,bg="#79c9bc",)
 Buttonnum = Button(Frame1,text="7",fg="#000000",font="Lucida 35 bold",padx=22,pady=28,bg= "#0269A4")
 Buttonnum.pack(side=LEFT,padx= 6, pady=5)
