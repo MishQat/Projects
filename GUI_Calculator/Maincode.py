@@ -22,7 +22,7 @@ root = Tk()
 root.geometry("854x800")
 root.configure(bg="#00B4AB")
 root.title("Calculator ")
-root.wm_iconbitmap("calculator.ico")
+root.wm_iconbitmap("calculator - Copy.ico")
 sbarvar = StringVar()
 sbarvar.set("Calculator 1.0.0 by Ahmed Mishqat____________________________________________________________________________________________________________________hope you enjoy it.")
 sbar = Label(root,textvariable=sbarvar,relief= SUNKEN,anchor= "w",bg="#db3939")#status bar
@@ -32,6 +32,7 @@ Screenvalue.set("")
 Entryofuser = Entry(root,textvariable=Screenvalue,font= "lucida 40 bold",fg=  "#e6175c",background= "#000000").pack(fill=X, padx=20,pady=30)
 #TODO:We make the button which will print out theris coresponding number in the calculator
 #for number 1,2,3
+
 Frame1 = Frame(root,bg="#79c9bc")
 Buttonnum = Button(Frame1,text="1",fg="#000000",font="Lucida 35 bold",padx=22,pady=28,bg= "#0269A4")
 Buttonnum.pack(side=LEFT ,padx= 6, pady=5)
@@ -43,6 +44,7 @@ Buttonnum = Button(Frame1,text="3",fg="#000000",font="Lucida 35 bold",padx=22,pa
 Buttonnum.pack(side=LEFT ,padx= 6,  pady=5)
 Buttonnum.bind("<Button-1>",click)
 Frame1.pack( pady= 10)
+
 #for number 4,5,6
 Frame1 = Frame(root,bg="#79c9bc",)
 Buttonnum = Button(Frame1,text="4",fg="#000000",font="Lucida 35 bold",padx=22,pady=28,bg= "#0269A4")
@@ -55,6 +57,7 @@ Buttonnum = Button(Frame1,text="6",fg="#000000",font="Lucida 35 bold",padx=22,pa
 Buttonnum.pack(side=LEFT ,padx= 6,  pady=5)
 Buttonnum.bind("<Button-1>",click)
 Frame1.pack(pady= 10)
+
 #for number 9,8,7
 Frame1 = Frame(root,bg="#79c9bc",)
 Buttonnum = Button(Frame1,text="7",fg="#000000",font="Lucida 35 bold",padx=22,pady=28,bg= "#0269A4")
