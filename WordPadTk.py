@@ -64,7 +64,7 @@ if __name__ == "__main__":
     root.title("untitled - WordPad")
     root.wm_iconbitmap("wordicon.ico")
     #text adder
-    textarea = Text(root,bg="#5dc2bd",fg="#e84a5f",font="Helvetica 12 bold")
+    textarea = Text(root,bg="#5dc2bd",fg="#451e3e",font="Helvetica")
     file = None
     textarea.pack(expand=True,fill=BOTH)
     Scroll = Scrollbar(textarea)#setting scroll bar
