@@ -11,8 +11,7 @@ time_now = time.strftime("%d/%b/%Y. time: %H:%M")
 def savepassinfile ():
     
     f = open("pass.txt","a")
-    f.write(f"Datetime:{time_now}, Username:{usernameentry.get()}, Password: {password}")
-    print(f"Date:{time_now}, Username:{usernameentry.get()}, Password: {password}")
+    f.write(f"Datetime:{time_now}, Username:{usernameentry.get()}, Password: {password}\n")
     f.close()
 #takes a username to save the pass
 def savepass ():
@@ -37,8 +36,6 @@ def pass_create():
     root3.title("Password")
     try:
         user_input_length = eval(entrypass.get())
-        print(user_input_length)
-        
         DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] 
         LOCASE_CHARACTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'm', 'n', 'o', 'p', 'q','r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'] 
         UPCASE_CHARACTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'M', 'N', 'O', 'p', 'Q','R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y','Z']
