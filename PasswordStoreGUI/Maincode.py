@@ -6,14 +6,15 @@ import tkinter.messagebox as tmsg
 import datetime
 time = datetime.datetime.now()
 time_now = time.strftime("%d/%b/%Y. time: %H:%M")
-#passgenerator from old project
+# TODO:passgenerator from old project
+#saves the password in a file with when it was created and under what name
 def savepassinfile ():
     
     f = open("pass.txt","a")
     f.write(f"Datetime:{time_now}, Username:{usernameentry.get()}, Password: {password}")
     print(f"Date:{time_now}, Username:{usernameentry.get()}, Password: {password}")
     f.close()
-    
+#takes a username to save the pass
 def savepass ():
     global usernameentry
     root4=Tk()
@@ -23,11 +24,13 @@ def savepass ():
     usernameentry.pack()
     Button(root4,text="Confirm",command=savepassinfile).pack()
     root4.mainloop()
+#loops refresh 
 def theloopwhichneverends():
     
     while True:
         createpass()
-
+#takes the length of the password and creates a distinct password
+#also takes intput if you want to make a new password or save this password
 def pass_create():
     global password
     root3 = Tk()
@@ -68,6 +71,7 @@ def pass_create():
         sys.exit()
     root3.mainloop()
 def createpass ():
+    #takes length of the password you want to create from the user
     global entrypass
     root2=Tk()
     root2.title("Create Password")
@@ -78,6 +82,7 @@ def createpass ():
     Button(root2,text="Confirm",command=pass_create).pack()
     root2.after(pass_create)
     root2.mainloop() 
+   #reads the file which has old generated passwords in it
 def showoldpass():
     f = open("pass.txt","r")
     root5 = Tk()
