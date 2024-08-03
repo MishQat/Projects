@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @MishQat
-- 👀 I’m interested in Python, Visual Basics
+- 👀 I’m interested in Python
 - 🌱 I’m currently learning Python
-- 💞️ I’m looking to collaborate on Phython
-- 📫 How to reach me my email mishqat0612@gmail.com
+- 💞️ I’m looking to collaborate on Python
+- 📫 How to reach me my email is mishqat0612@gmail.com
 - 
 
 <!---
